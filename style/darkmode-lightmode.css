@@ -1,0 +1,58 @@
+/* ==================
+  *DARKMODE LIGHTMODE Transition
+  =================== */
+.switcher-desktop {
+  display: none;
+}
+.switcher {
+  display: flex;
+  max-width: 7rem;
+  gap: 1rem;
+  position: relative;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--plan-white);
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+  transition: 400ms;
+}
+#darkmode-lightmode-checkbox {
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+  transform: scale(20);
+}
+/* .switcher.darkmode-active {
+    background-color: #1a1a1a;
+  } */
+.darkmode-lightmode-icon {
+  transition: 400ms;
+}
+.darkmode-lightmode-checkbox-mobile:checked ~ .lightmode-icon {
+  transform: translateX(140%) translateY(-0.1rem) scale(0.45);
+}
+.darkmode-lightmode-checkbox-desktop:checked ~ .lightmode-icon {
+  transform: translateX(200%) translateY(-0.1rem) scale(0.45);
+}
+
+.darkmode-lightmode-checkbox-mobile:checked ~ .darkmode-icon,
+.darkmode-lightmode-checkbox-desktop:checked ~ .darkmode-icon {
+  opacity: 1;
+  transform: translateY(0) scaleX(-1);
+}
+.darkmode-lightmode-icon {
+  width: 30px;
+}
+.darkmode-icon {
+  transform: translateY(200%) scaleX(-1);
+  opacity: 1;
+  font-size: 2rem;
+  color: #fff;
+}
