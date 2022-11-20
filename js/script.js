@@ -25,6 +25,22 @@ friesMenu.addEventListener("click", () => {
   }
 });
 
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  if (lastScrollY < window.scrollY) {
+    // document.getElementsByClassName("nav")[0].style.backgroundColor = "transparent";
+    document.getElementsByClassName("nav")[0].style.top = "-5rem";
+    document.getElementsByClassName("nav")[0].style.transition = "400ms";
+  } else {
+    // document.getElementsByClassName("nav")[0].style.backgroundColor = "var(--black-to-white)";
+    document.getElementsByClassName("nav")[0].style.top = "0";
+  }
+  lastScrollY = window.scrollY;
+});
+
+console.log(window.scrollY);
+
 // *LIGTMODE DARKMODE
 
 const switcherButton = document.getElementsByClassName("darkmode-lightmode-checkbox");

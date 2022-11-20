@@ -89,8 +89,6 @@ body {
   line-height: 150%;
   background-color: var(--bg-clr);
   transition: 400ms;
-  overflow-x: hidden;
-  z-index: 999999;
 }
 /*
     *UTILITES 
@@ -119,14 +117,21 @@ button {
 header {
   width: 100%;
   padding: var(--padding);
+  position: relative;
 }
 nav {
   width: 100%;
-  position: relative;
+  /* position: fixed;
+  padding: var(--padding);
+  top: 0;
+  left: 0;
+  right: 0; */
   width: 100%;
   display: flex;
   justify-content: space-between !important;
   align-items: center;
+  pointer-events: all;
+  z-index: 5;
 }
 
 /* ===============
@@ -282,6 +287,7 @@ header {
 
 .header-contents-wrapper {
   flex-direction: column;
+  z-index: 1;
 }
 
 .header-main-icon {
@@ -342,6 +348,10 @@ header {
 /*  ==============
     *Main Section 
     ============= */
+main {
+  position: relative;
+  z-index: 1;
+}
 
 /* =========
   *Services
