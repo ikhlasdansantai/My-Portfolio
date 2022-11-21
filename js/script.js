@@ -25,22 +25,6 @@ friesMenu.addEventListener("click", () => {
   }
 });
 
-let lastScrollY = window.scrollY;
-
-window.addEventListener("scroll", () => {
-  if (lastScrollY < window.scrollY) {
-    // document.getElementsByClassName("nav")[0].style.backgroundColor = "transparent";
-    document.getElementsByClassName("nav")[0].style.top = "-5rem";
-    document.getElementsByClassName("nav")[0].style.transition = "400ms";
-  } else {
-    // document.getElementsByClassName("nav")[0].style.backgroundColor = "var(--black-to-white)";
-    document.getElementsByClassName("nav")[0].style.top = "0";
-  }
-  lastScrollY = window.scrollY;
-});
-
-console.log(window.scrollY);
-
 // *LIGTMODE DARKMODE
 
 const switcherButton = document.getElementsByClassName("darkmode-lightmode-checkbox");
@@ -138,3 +122,37 @@ const quotesGenerator = (quotes, author = "@NewUser") => {
   this.quotes = quotes;
   this.author = author;
 };
+
+// *Form Section
+const contactForm = document.getElementsByClassName("contact-form")[0];
+const formLabels = document.querySelectorAll(".formBox label");
+const formInputs = document.querySelectorAll(".formBox input");
+
+for (let i = 0; i < formInputs.length; i++) {
+  const formInput = formInputs[i];
+
+  for (let j = 0; j < formLabels.length; j++) {
+    const formLabel = formLabels[i];
+
+    formInput.addEventListener("focus", () => {
+      formLabel.classList.add("moveTop");
+    });
+
+    formInput.addEventListener("blur", () => {
+      if (formInput.value.length >= 1) {
+        formLabel.classList.add("moveTop");
+      } else if (formInput.value.length === 0) {
+        formLabel.classList.remove("moveTop");
+      } else {
+        formLabel.classList.add("moveTop");
+      }
+    });
+  }
+}
+// contactForm.addEventListener("change", () => {
+//   if (formValue.length === 0) {
+//     formLabel.classList.remove("moveTop");
+//   } else if (formValue.length > 0) {
+//     formLabel.classList.add("moveTop");
+//   }
+// });
