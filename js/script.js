@@ -1,6 +1,6 @@
 const giselleVideoContainer = document.getElementsByClassName("greeting-video")[0];
 const giselleVideo = document.getElementsByClassName("giselle-video")[0];
-const playVideoBtn = document.getElementsByClassName("video-from-me-btn")[0];
+const playVideoBtn = document.getElementsByClassName("my-cv")[0];
 
 playVideoBtn.addEventListener("click", () => {
   giselleVideoContainer.classList.add("show");
