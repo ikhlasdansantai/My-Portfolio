@@ -33,7 +33,6 @@ const displayTransition = document.getElementsByClassName("lightmode-darkmode-tr
 
 for (let i = 0; i < switcherButton.length; i++) {
   const switcher = switcherButton[i];
-  console.log(switcher);
 
   switcher.addEventListener("click", () => {
     const lightModeTransition = document.getElementsByClassName("lightmode-transition")[0];
@@ -149,10 +148,37 @@ for (let i = 0; i < formInputs.length; i++) {
     });
   }
 }
-// contactForm.addEventListener("change", () => {
-//   if (formValue.length === 0) {
-//     formLabel.classList.remove("moveTop");
-//   } else if (formValue.length > 0) {
-//     formLabel.classList.add("moveTop");
-//   }
-// });
+
+const contactBtn = document.getElementsByClassName("contact-button")[0];
+
+contactBtn.addEventListener("click", (e) => {
+  directTo();
+  setTimeout(() => {
+    return;
+  }, 4000);
+});
+
+function directTo() {
+  let timerInterval;
+  Swal.fire({
+    title: "Form Berhasil Dikirim!",
+    html: "I will close in <b></b> milliseconds.",
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: () => {
+      Swal.showLoading();
+      const b = Swal.getHtmlContainer().querySelector("b");
+      timerInterval = setInterval(() => {
+        b.textContent = Swal.getTimerLeft();
+      }, 100);
+    },
+    willClose: () => {
+      clearInterval(timerInterval);
+    },
+  }).then((result) => {
+    /* Read more about handling dismissals below */
+    if (result.dismiss === Swal.DismissReason.timer) {
+      return;
+    }
+  });
+}
