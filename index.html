@@ -10,9 +10,7 @@
     <meta property="og:site_name" content="Mochammad Ikhsan Nuryaman - Front End Developer &amp; Instagram Content Creator " />
     <meta property="og:title" content="Mochammad Ikhsan Nuryaman" />
     <meta property="og:description" content="Hello my name Ikhsan is a Front End Developer, and my job is Bringing mock-ups to life using HTML, CSS, JavaScript" />
-
     <title>Mochammad Ikhsan Nuryaman</title>
-
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/darkmode-lightmode.css" />
     <link
@@ -80,7 +78,7 @@
 
           <!-- *Darkmode Lightmode ICON -->
           <div class="switcher switcher-mobile darkmode-lightmode">
-            <input type="checkbox" id="darkmode-lightmode-checkbox" class="darkmode-lightmode-checkbox darkmode-lightmode-checkbox-mobile darkmode-lightmode-checkbox-desktop" />
+            <input type="checkbox" id="darkmode-lightmode-checkbox" class="darkmode-lightmode-checkbox darkmode-lightmode-checkbox-mobile" />
             <div class="lightmode-icon darkmode-lightmode-icon">
               <img src="assets/sun.png" alt="" class="img" />
             </div>
@@ -392,14 +390,14 @@
           <form action="https://formsubmit.co/ikhsaneren@gmail.com" method="POST" class="contact-form display-f">
             <div class="formBox display-f">
               <label for="username" class="label">Your Name :</label>
-              <input type="text" id="username" name="username" />
+              <input type="text" id="username" name="username" required />
             </div>
             <div class="formBox display-f">
               <label for="email" class="label">Your E-Mail :</label>
-              <input type="email" id="email" name="email" />
+              <input type="email" id="email" name="email" required />
             </div>
             <div class="formBox display-f">
-              <select name="Project Type" id="select">
+              <select name="Project Type" id="select" required>
                 <option value="default" disabled>Project Title</option>
                 <option value="E-Commerce">E-Commerce</option>
                 <option value="Company Profile">Company Profile</option>
@@ -407,7 +405,7 @@
                 <option value="Personal Website">Personal Website</option>
               </select>
             </div>
-            <div class="formBox text-area-box display-f">
+            <div class="formBox text-area-box display-f" required>
               <textarea class="message" placeholder="Message" name="Message"></textarea>
             </div>
             <button type="submit" class="contact-button">Submit</button>
