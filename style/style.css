@@ -396,6 +396,7 @@ main {
 }
 
 .service-cards {
+  margin-top: 1.5rem;
   width: 100%;
   justify-content: stretch;
   gap: 2rem;
