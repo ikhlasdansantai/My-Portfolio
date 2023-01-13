@@ -592,6 +592,7 @@ main {
 }
 .certificate-headers p {
   margin-top: 0.125rem;
+  font-size: var(--font-size-text);
   color: var(--text-clr);
 }
 /* ================== 
