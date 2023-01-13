@@ -71,6 +71,24 @@ const typed = new Typed("#typed", {
   loop: true,
 });
 
+// *Accordion
+const headers = document.querySelectorAll(".accordion-header");
+headers.forEach((header) => {
+  header.addEventListener("click", () => {
+    const panel = header.nextElementSibling;
+    console.log(header.children[1]);
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+      header.children[1].style.transform = "rotate(0deg)";
+      header.children[1].style.transition = "100ms";
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      header.children[1].style.transform = "rotate(45deg)";
+      header.children[1].style.transition = "100ms";
+    }
+  });
+});
+
 // *Random Quotes
 const quoteText = document.getElementsByClassName("quotes")[0];
 const quoteAuthor = document.getElementsByClassName("quotes-author")[0];

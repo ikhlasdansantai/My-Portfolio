@@ -567,6 +567,75 @@ main {
   transition: 400ms;
 }
 
+/* ============
+  *Certificates
+  ============= */
+#certificates {
+  padding: var(--padding);
+}
+#certificates p {
+  margin-top: 0;
+}
+.certificates-img-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 4rem;
+  margin-top: 2rem;
+}
+.certificate-card {
+  text-align: center;
+}
+
+.certificate-headers {
+  margin-top: 1.125rem;
+  color: var(--black-to-white);
+}
+.certificate-headers p {
+  margin-top: 0.125rem;
+  color: var(--text-clr);
+}
+/* ================== 
+  *Question And Answer 
+  =================== */
+#Q-A {
+  --margin: 5rem 0;
+  margin: var(--margin);
+  padding: var(--padding);
+}
+#Q-A .project-caption {
+  margin-top: 0;
+  color: var(--text-clr);
+  font-size: var(--font-size-text);
+}
+.accordion {
+  margin-top: 2rem;
+  width: 100%;
+}
+.accordion-panel {
+  overflow: hidden;
+}
+.accordion-header {
+  margin: 0.75rem 0;
+  background-color: var(--third-clr);
+  color: var(--plan-white);
+  cursor: pointer;
+  padding: 18px;
+  position: relative;
+}
+.accordion-header p {
+  width: 80%;
+  margin-right: auto;
+}
+.accordion-header i {
+  font-size: 1.25rem;
+}
+.accordion-content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
 /* ============== 
   *quotes section
    ============== */
