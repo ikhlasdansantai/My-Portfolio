@@ -537,6 +537,18 @@ main {
 .project-tech-img {
   width: 2rem;
 }
+
+.project-live-demo {
+  margin-top: 1.5rem;
+  color: var(--grey-clr);
+}
+.project-live-demo a {
+  color: #fdad7c;
+  text-decoration: underline;
+}
+.project-live-demo a:active {
+  color: #616161;
+}
 .contact-text {
   margin-top: 0.5rem;
   font-size: var(--font-size-text);
@@ -585,7 +597,9 @@ main {
 .certificate-card {
   text-align: center;
 }
-
+.certificate-img {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
 .certificate-headers {
   margin-top: 1.125rem;
   color: var(--black-to-white);
