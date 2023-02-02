@@ -119,6 +119,18 @@ button {
   cursor: pointer;
 }
 
+.to-top {
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
+  background-color: var(--second-main-clr);
+  border-radius: 50%;
+  padding: 1rem 1.2rem;
+  font-size: 1.8rem;
+  display: none;
+  z-index: 99999999999;
+  cursor: pointer;
+}
 header {
   width: 100%;
   padding: var(--padding);
@@ -598,6 +610,7 @@ main {
   text-align: center;
 }
 .certificate-img {
+  border: 10px solid var(--black-to-white);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .certificate-headers {
@@ -632,7 +645,7 @@ main {
 .accordion-header {
   margin: 0.75rem 0;
   background-color: var(--third-clr);
-  color: var(--plan-white);
+  color: var(--grey-clr);
   cursor: pointer;
   padding: 18px;
   position: relative;
@@ -648,6 +661,7 @@ main {
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
+  color: var(--black-to-white);
   transition: max-height 0.2s ease-out;
 }
 

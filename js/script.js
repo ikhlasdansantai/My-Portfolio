@@ -132,6 +132,7 @@ const quotes = [
     quotes: "Walau berjalan di jalur berbeda, langit yang luas menghubungkan kita.",
     author: "-JKT48",
   },
+  { quotes: "Banyak belajar biar bisa bantu banyak orang", author: "Indonesia Belajar" },
 ];
 
 //  *SOON
@@ -200,3 +201,16 @@ function directTo() {
     }
   });
 }
+
+let toTopIcon = document.getElementsByClassName("to-top")[0];
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    toTopIcon.style.display = "block";
+  } else {
+    toTopIcon.style.display = "none";
+  }
+});
+toTopIcon.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
