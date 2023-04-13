@@ -685,7 +685,7 @@ main {
   min-height: 10rem;
   margin: auto;
   margin-top: 2rem;
-  --padding: 3rem;
+  --padding: 3rem 1.5rem;
   padding: var(--padding);
   background-color: #333;
   color: #f5f5f5;
