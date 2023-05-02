@@ -7,7 +7,7 @@ playVideoBtn.addEventListener("click", () => {
   giselleVideo.play();
 
   giselleVideo.addEventListener("ended", () => {
-    setTimeout(() => {
+    setTimeout(() => { 
       giselleVideoContainer.classList.remove("show");
     }, 100);
   });
