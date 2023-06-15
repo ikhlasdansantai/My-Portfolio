@@ -1074,12 +1074,26 @@ footer {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1150px) {
   header {
     min-height: inherit;
   }
   .header-contents-wrapper {
     height: inherit;
     --padding: 8rem 0;
+    padding: var(--padding);
+  }
+}
+
+@media (min-width: 1700px) {
+  header {
+    min-height: inherit;
+    --padding: 8rem 0;
+    padding: var(--padding);
+  }
+  .header-contents-wrapper {
+    height: inherit;
+    --padding: 8rem 0;
+    padding: var(--padding);
   }
 }
