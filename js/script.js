@@ -7,7 +7,7 @@ playVideoBtn.addEventListener("click", () => {
   giselleVideo.play();
 
   giselleVideo.addEventListener("ended", () => {
-    setTimeout(() => { 
+    setTimeout(() => {
       giselleVideoContainer.classList.remove("show");
     }, 100);
   });
@@ -65,7 +65,7 @@ function toDarkmode() {
 
 // *Typed JS
 const typed = new Typed("#typed", {
-  strings: ["Front End Developer", "UI Designer", "Instagram Content Creator"],
+  strings: ["Front End Developer", "UI Designer", "Instagram Content Creator", "JavaScript Developer", "I Code With ReactJS + ts soon!"],
   typeSpeed: 125,
   backSpeed: 100,
   loop: true,
