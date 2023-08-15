@@ -590,6 +590,9 @@ main {
 #certificates {
   padding: var(--padding);
 }
+.certificate-headers h2 {
+  line-height: 1.4;
+}
 #certificates p {
   margin-top: 0;
 }
