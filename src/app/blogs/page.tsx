@@ -1,7 +1,7 @@
 import React from "react";
 import BlogCard from "../components/common/Fragments/BlogCard";
 
-export default function page() {
+export default function Page() {
   return (
     <div className="py-10 sm:pt-20 lg:pt-40 px-4 space-y-10 max-w-6xl mx-auto min-[2000px]:h-[40rem]">
       <div className="titles mb-10">
