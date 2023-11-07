@@ -14,10 +14,10 @@ export default function TechList() {
   const [TechList, setTechList] = useState<Tech[] | null>(null);
   async function getTechList() {
     try {
-      const res = await fetch("http://localhost:4400/tech");
+      const res = await fetch("api/techstack");
       if (res.ok) {
         const data = await res.json();
-        setTechList(data);
+        setTechList(data.data);
       } else {
         console.error("Server internal Error");
       }
@@ -34,7 +34,7 @@ export default function TechList() {
 
   return (
     <>
-      <div className="tech__stack grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 group">
+      <div className="tech__stack max-[350px]:grid-cols-1 grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 group">
         {TechList.map((tech) => (
           <TechListCard key={tech.id} name={tech.name} url={tech.url} status={tech.status} />
         ))}

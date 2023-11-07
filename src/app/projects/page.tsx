@@ -1,6 +1,5 @@
 "use client";
 
-import Head from "next/head";
 import { useEffect, useState } from "react";
 
 function ProjectCategory({ category }: { category: any }) {
@@ -44,20 +43,16 @@ export default function Page() {
 
   return (
     <>
-      <head>
-        <title>Projects Page</title>
-        <meta name="description" content="This is the meta description for My Page" />
-      </head>
-      <main className="grid grid-cols-1 py-10 sm:py-20 lg:pt-40 gap-4 justify-center md:grid-cols-2 px-4 md:px-0 items-center max-w-6xl mx-auto min-[2000px]:h-[40rem] ">
+      <main className="section__grid">
         <div className="left">
           <div className="titles">
-            <h1 className="text-white relative ">
+            <h1 className="text-white relative overflow-hidden">
               <span className="text-white/[.2] text-[6.25rem] font-bold leading-[normal] opacity-25">Projects</span>
-              <b className="absolute left-20 bottom-0 top-8 mx-auto text-white text-[2.5rem] font-bold">Projects</b>
+              <b className="bg__text__heading">Projects</b>
             </h1>
             <p className="text-white/[.60] max-w-[38ch]">Di halaman ini kamu akan menemukan proyek-proyek yang pernah saya buat.</p>
           </div>
-          <div className="test_ting mt-20 space-y-4">
+          <div className="test_ting mt-10 space-y-4">
             {/* Category 1 */}
             <div onClick={() => setCategory("all")} className="choose__category cursor-pointer flex gap-2 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
