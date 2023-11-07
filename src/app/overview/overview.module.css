@@ -1,0 +1,17 @@
+.tech:hover {
+  transition: 300ms;
+}
+.tech:hover .tech__pict {
+  transform: scale(1.1);
+  transition: 300ms;
+}
+.tech:hover .tech__info span {
+  opacity: 1;
+  transition: 300ms;
+  transition-delay: 200ms;
+  transform: translateY(40px);
+}
+.tech:hover .tech__info h5 {
+  transform: translateY(-7px);
+  transition: 300ms;
+}
