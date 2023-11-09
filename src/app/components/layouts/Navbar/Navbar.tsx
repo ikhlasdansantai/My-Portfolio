@@ -95,6 +95,3 @@ export default function Navbar() {
   );
 }
 
-{
-  /* <nav className="fixed hidden px-4 xl:px-0 left-0 right-0 lg:flex justify-between items-center max-w-6xl mx-auto py-8"> */
-}
