@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Know More About Me:)",
 };
 
-export default function page() {
+export default function Page() {
   return (
     <main className="section__no__grid pb-24">
       <div className="overview__header">
