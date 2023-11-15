@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Skills() {
   return (
-    <div className="section__no__grid pb-24">
+    <main className="section__no__grid pb-24">
       <div className="titles">
         <h1 className="text-white relative overflow-hidden">
           <span className="text-white/[.2] text-[6.25rem] font-bold leading-[normal] opacity-25">Skills</span>
@@ -17,6 +17,6 @@ export default function Skills() {
         <p className="text-white/[.60] mt-2 max-[350px]:text-sm">Beberapa skill yang saya punya, sebenernya banyak skill saya, tapi males masukin.</p>
       </div>
       <SkillList />
-    </div>
+    </main>
   );
 }
