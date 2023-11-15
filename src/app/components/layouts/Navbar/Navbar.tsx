@@ -64,7 +64,7 @@ export default function Navbar() {
                   "text-white font-semibold": href === currentPath,
                   "text-white/[.60]": href !== currentPath,
                   "text-black": scrollClass.textClass === "text-black",
-                  "transition duration-300": true,
+                  "transition duration-300 hover:text-white": true,
                 })}
               >
                 {label}
@@ -72,7 +72,9 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
-        <div className="px-4 py-3 md:py-4 rounded-md bg-[#2ba386] text-white">Punya Project?</div>
+        <Link href="/contact" className="px-4 py-3 md:py-4 rounded-md bg-[#2ba386] text-white cursor-pointer ">
+          Punya Project?
+        </Link>
 
         <ul className="nav_bottom fixed bottom-0 left-0 right-0 px-6 py-6 bg-[#1e1f2b] border-t-2 border-l-2 border-r-2 rounded-tl-lg rounded-tr-lg flex justify-between md:hidden text-white/[.60]">
           {links.map(({ label, href }, index): LinkProps | any => (
@@ -94,4 +96,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
