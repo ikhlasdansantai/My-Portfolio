@@ -18,34 +18,41 @@ export default function Navbar() {
     { label: "Blogs", href: "/blogs" },
   ];
 
+  // const [scrollClass, setScrollClass] = useState({
+  //   bgClass: window.innerWidth < 640 ? "" : "",
+  //   textClass: window.innerWidth < 640 ? "text-black" : "",
+  // });
   const [scrollClass, setScrollClass] = useState({
-    bgClass: window.innerWidth < 640 ? "" : "",
-    textClass: window.innerWidth < 640 ? "text-black" : "",
+    bgClass: "",
+    textClass: "text-black",
   });
 
   const handleScroll = () => {
-    const isScrolled = window.scrollY > 0;
-    console.log(window.innerWidth);
-    if (window.innerWidth < 640) {
-      setScrollClass({
-        bgClass: "",
-        textClass: "text-black",
-      });
-    } else {
-      setScrollClass({
-        bgClass: isScrolled ? "bg-slate-500" : "",
-        textClass: isScrolled ? "text-black" : "text-white",
-      });
+    if (typeof window !== "undefined") {
+      const isScrolled = window.scrollY > 0;
+      if (window.innerWidth < 640) {
+        setScrollClass({
+          bgClass: "",
+          textClass: "text-black",
+        });
+      } else {
+        setScrollClass({
+          bgClass: isScrolled ? "bg-slate-500" : "",
+          textClass: isScrolled ? "text-black" : "text-white",
+        });
+      }
     }
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    setScrollClass({ ...scrollClass, textClass: "text-white" });
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      setScrollClass({ ...scrollClass, textClass: "text-white" });
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   return (
