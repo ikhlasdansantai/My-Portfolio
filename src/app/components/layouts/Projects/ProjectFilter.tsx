@@ -1,13 +1,43 @@
-import React from "react";
-import ProjectCategory from "../../common/Fragments/ProjectCard";
-import ProjectCard from "../../common/Fragments/ProjectCard";
-import Image from "next/image";
+"use client";
 
-export default function ProjectFilter({ show, setShow, category }: any) {
+import ProjectCard from "../../common/Fragments/ProjectCard";
+import { Suspense, useEffect, useState } from "react";
+import Loading from "./loading";
+import { useProjectStore } from "@/app/store/projectCategoryStore";
+
+interface Projects {
+  name: string;
+  url: string;
+  description: string;
+  category: string;
+  links: any;
+  technology: string[];
+}
+
+export default function ProjectFilter() {
+  const [projects, setProjects] = useState<Projects[] | null>(null);
+
+  async function getProjects() {
+    try {
+      await useProjectStore.getState().fetchingProject("api/projects");
+      const getProjects = useProjectStore.getState().projects;
+
+      setProjects(getProjects.data);
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  useEffect(() => {
+    getProjects();
+  }, []);
+
+  if (projects === null) return <p className="text-white">Sedang Dimuat...</p>;
   return (
     <>
-      <ProjectCard show={show} setShow={setShow} category={category} />
-      {/* <ProjectCategory category="semua" /> */}
+      <Suspense fallback={<Loading />}>
+        <ProjectCard projects={projects} />
+      </Suspense>
     </>
   );
 }
