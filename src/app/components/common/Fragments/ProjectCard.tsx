@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useProjectStore } from "@/app/store/projectCategoryStore";
 import { useShallow } from "zustand/react/shallow";
 import classNames from "classnames";
+import ProjectTech from "./ProjectTech";
 
 interface Projects {
   name: string;
@@ -31,7 +32,7 @@ export default function ProjectCard({ projects }: ProjectCardProps) {
 
   if (category === "semua kategori") {
     return (
-      <div className="text-white grid sm:grid-cols-2 gap-10 ">
+      <div className="text-white grid sm:grid-cols-2 gap-10">
         {projects.map(({ name, url, description, category, links, technology }, index): any => (
           <div
             key={index}
@@ -39,7 +40,7 @@ export default function ProjectCard({ projects }: ProjectCardProps) {
               setProjectDetail({ name, url, description, category, links, technology });
               setProjDetail(true);
             }}
-            className="pt-4 px-4 pb-6 bg-white/[.03] rounded-lg "
+            className="pt-4 px-4 pb-6 bg-white/[.03] rounded-lg cursor-pointer"
           >
             <figure className="rounded-md overflow-hidden">
               <Image
@@ -55,8 +56,11 @@ export default function ProjectCard({ projects }: ProjectCardProps) {
                 quality={100}
               />
             </figure>
-            <h2 className="text-white mt-4 mb-1">{name}</h2>
-            <span className="text-white/[.60] text-xs">{description}.</span>
+            <h2 className="text-white text-lg mt-4 mb-1">{name}</h2>
+            <span className="text-white/[.60] text-xs lg:text-md leading-6 cut__text cut__text__two">{description}.</span>
+            <div className="mt-6">
+              <ProjectTech technology={technology} />
+            </div>
           </div>
         ))}
       </div>
@@ -72,7 +76,7 @@ export default function ProjectCard({ projects }: ProjectCardProps) {
             setProjectDetail({ name, url, description, category, links, technology });
             setProjDetail(true);
           }}
-          className="pt-4 px-4 pb-6 bg-white/[.03] rounded-lg "
+          className="pt-4 px-4 pb-6 bg-white/[.03] rounded-lg cursor-pointer"
         >
           <figure className="rounded-md overflow-hidden">
             <Image
@@ -88,8 +92,11 @@ export default function ProjectCard({ projects }: ProjectCardProps) {
               quality={100}
             />
           </figure>
-          <h2 className="text-white mt-4 mb-1">{name}</h2>
-          <span className="text-white/[.60] text-xs">{description}.</span>
+          <h2 className="text-white text-lg mt-4 mb-1">{name}</h2>
+          <span className="text-white/[.60] text-xs lg:text-md leading-6 cut__text cut__text__two">{description}.</span>
+          <div className="mt-6">
+            <ProjectTech technology={technology} />
+          </div>
         </div>
       ))}
     </div>
