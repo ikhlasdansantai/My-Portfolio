@@ -1,32 +1,97 @@
-import Image from "next/image";
+"use client";
 
-export default function ProjectCard({ show, setShow, category }: any) {
-  if (category === "semua") {
-    return <h2>Semua kategori</h2>;
-  } else if (category === "ui design") {
-    return <h2>Semua kategori</h2>;
-  } else if (category === "web development") {
-    return <h2>Semua kategori</h2>;
-  } else if (category === "motion graphics") {
-    return <h2>Semua kategori</h2>;
+import Image from "next/image";
+import { useProjectStore } from "@/app/store/projectCategoryStore";
+import { useShallow } from "zustand/react/shallow";
+import classNames from "classnames";
+
+interface Projects {
+  name: string;
+  url: string;
+  description: string;
+  category: string;
+  links: any;
+  technology: string[];
+}
+
+interface ProjectCardProps {
+  projects: Projects[];
+}
+
+export default function ProjectCard({ projects }: ProjectCardProps) {
+  const { category, setProjDetail, setProjectDetail } = useProjectStore(
+    useShallow((state) => ({
+      category: state.projCateFilters,
+      setProjDetail: state.setShowProjDetail,
+      setProjectDetail: state.setProjectDetail,
+    }))
+  );
+
+  const projFilter = projects.map((project) => project).filter((project) => project.category === category);
+
+  if (category === "semua kategori") {
+    return (
+      <div className="text-white grid sm:grid-cols-2 gap-10 ">
+        {projects.map(({ name, url, description, category, links, technology }, index): any => (
+          <div
+            key={index}
+            onClick={() => {
+              setProjectDetail({ name, url, description, category, links, technology });
+              setProjDetail(true);
+            }}
+            className="pt-4 px-4 pb-6 bg-white/[.03] rounded-lg "
+          >
+            <figure className="rounded-md overflow-hidden">
+              <Image
+                src={url}
+                alt="gambar"
+                height="200"
+                width="200"
+                style={{ width: "100%", height: "auto" }}
+                className={classNames({
+                  "blur-[7px]": category === "wip",
+                })}
+                loading="lazy"
+                quality={100}
+              />
+            </figure>
+            <h2 className="text-white mt-4 mb-1">{name}</h2>
+            <span className="text-white/[.60] text-xs">{description}.</span>
+          </div>
+        ))}
+      </div>
+    );
   }
+
   return (
     <div className="text-white grid md:grid-cols-2 gap-10 ">
-      <div onClick={() => setShow(true)} className="pt-4 px-4 pb-6 bg-white/[.03] rounded-lg ">
-        <figure className="rounded-md overflow-hidden">
-          <Image src={"https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/projects/100DaysOfCode.png"} alt="gambar" height="200" width="200" style={{ width: "100%", height: "auto" }} loading="lazy" quality={100} />
-        </figure>
-        <h2 className="text-white mt-4 mb-1">100 Days Of Code</h2>
-        <span className="text-white/[.60] text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellat libero esse iure, fugit magni.</span>
-      </div>
-
-      <div onClick={() => setShow(true)} className="pt-4 px-4 pb-6 bg-white/[.03] rounded-lg ">
-        <figure className="rounded-md overflow-hidden">
-          <Image src={"https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/projects/Hokben%20Clone.png"} alt="gambar" height="200" width="200" style={{ width: "100%", height: "auto" }} loading="lazy" quality={100} />
-        </figure>
-        <h2 className="text-white mt-4 mb-1">Hokben Clone</h2>
-        <span className="text-white/[.60] text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellat libero esse iure, fugit magni.</span>
-      </div>
+      {projFilter.map(({ name, url, description, category, links, technology }, index): any => (
+        <div
+          key={index}
+          onClick={() => {
+            setProjectDetail({ name, url, description, category, links, technology });
+            setProjDetail(true);
+          }}
+          className="pt-4 px-4 pb-6 bg-white/[.03] rounded-lg "
+        >
+          <figure className="rounded-md overflow-hidden">
+            <Image
+              src={url}
+              alt="gambar"
+              height="200"
+              width="200"
+              style={{ width: "100%", height: "auto" }}
+              loading="lazy"
+              className={classNames({
+                "blur-[7px]": category === "wip",
+              })}
+              quality={100}
+            />
+          </figure>
+          <h2 className="text-white mt-4 mb-1">{name}</h2>
+          <span className="text-white/[.60] text-xs">{description}.</span>
+        </div>
+      ))}
     </div>
   );
 }
