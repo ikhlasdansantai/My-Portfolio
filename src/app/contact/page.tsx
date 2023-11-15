@@ -1,6 +1,13 @@
-export default function Page() {
+"use client";
+import classNames from "classnames";
+
+function ContactNotReady() {
+  return <h1 className="text-2xl text-white text-center mx-auto">Masih Dalam Pembangunan Yagesya</h1>;
+}
+
+function ContactReady() {
   return (
-    <main className="grid grid-cols-1 py-10 sm:py-20 xl:py-60 gap-4 md:gap-0 lg:gap-40 justify-center items-start md:grid-cols-2 px-4 h-screen max-w-6xl mx-auto min-[2000px]:h-[40rem]">
+    <>
       <div className="titles">
         <h1 className="text-white font-bold text-4xl">Let's make something amazing together</h1>
         <p className="text-white/[.60] mt-2">
@@ -26,6 +33,21 @@ export default function Page() {
           ></textarea>
         </div>
       </form>
+    </>
+  );
+}
+
+export default function Page() {
+  const contactPageReady = false;
+
+  return (
+    <main
+      className={classNames({
+        "grid-cols-1 gap-4 md:gap-0 lg:gap-40 items-start  md:grid-cols-2": contactPageReady !== false,
+        "grid py-10 sm:py-20 xl:py-60 justify-center px-4 h-screen max-w-6xl mx-auto min-[2000px]:h-[40rem]": true,
+      })}
+    >
+      {contactPageReady ? <ContactReady /> : <ContactNotReady />}
     </main>
   );
 }
