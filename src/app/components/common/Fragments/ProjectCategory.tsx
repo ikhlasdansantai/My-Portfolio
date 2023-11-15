@@ -17,7 +17,7 @@ export default function ProjectCategory({ category, links, technology }: project
         <div className="box space-y-2">
           <h3 className="font-medium">Live Preview</h3>
           <a href={livePreview} className="text-white/[.60]">
-            {links.livePreview}
+            {livePreview}
           </a>
         </div>
         <div className="box space-y-2">

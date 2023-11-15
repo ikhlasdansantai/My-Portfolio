@@ -1,5 +1,11 @@
 "use client";
+import type { Metadata } from "next";
 import classNames from "classnames";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Work In Progress:3",
+};
 
 function ContactNotReady() {
   return <h1 className="text-2xl text-white text-center mx-auto">Masih Dalam Pembangunan Yagesya</h1>;

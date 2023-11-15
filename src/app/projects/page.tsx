@@ -1,9 +1,13 @@
-// "use client";
-
+import type { Metadata } from "next";
 import ProjectDetail from "../components/common/Fragments/ProjectDetail";
 import ProjectFilter from "../components/layouts/Projects/ProjectFilter";
 import ProjectMenus from "../components/layouts/Projects/ProjectMenus";
 import styles from "./project.module.css";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "A list of my Projects",
+};
 
 export default function Page() {
   return (

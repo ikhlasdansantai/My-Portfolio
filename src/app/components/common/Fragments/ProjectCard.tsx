@@ -39,6 +39,7 @@ export default function ProjectCard({ projects }: ProjectCardProps) {
             onClick={() => {
               setProjectDetail({ name, url, description, category, links, technology });
               setProjDetail(true);
+              document.title = name;
             }}
             className="pt-4 px-4 pb-6 bg-white/[.03] rounded-lg cursor-pointer"
           >
@@ -75,6 +76,7 @@ export default function ProjectCard({ projects }: ProjectCardProps) {
           onClick={() => {
             setProjectDetail({ name, url, description, category, links, technology });
             setProjDetail(true);
+            document.title = name;
           }}
           className="pt-4 px-4 pb-6 bg-white/[.03] rounded-lg cursor-pointer"
         >

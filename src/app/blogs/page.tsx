@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import React from "react";
 import BlogCard from "../components/common/Fragments/BlogCard";
+
+export const metadata: Metadata = {
+  title: "Blogs",
+  description: "A list of blogs on medium",
+};
 
 export default function page() {
   return (

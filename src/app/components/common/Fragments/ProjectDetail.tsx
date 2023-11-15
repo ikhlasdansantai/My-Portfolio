@@ -15,12 +15,6 @@ export default function ProjectDetail() {
     }))
   );
 
-  // Bug ?
-  // const category = useProjectStore((state) => state.projCateFilters);
-
-  // Cek showProjDetail State
-  // if (getProjectDetail == null) return <p>Loading....</p>;
-
   return (
     <div
       className={classNames({
@@ -29,7 +23,13 @@ export default function ProjectDetail() {
         "fixed top-0 left-0 right-0 bottom-0 z-[99999999] min-h-screen overflow-y-scroll bg-[#1e1f2b] px-4 py-8 text-white space-y-10 duration-700 transition max-w-6xl mx-auto": true,
       })}
     >
-      <b onClick={() => setProjDetail(false)} className="flex items-center cursor-pointer">
+      <b
+        onClick={() => {
+          setProjDetail(false);
+          document.title = "Projects";
+        }}
+        className="flex items-center cursor-pointer"
+      >
         <Icon icon="uis:angle-left" className="text-2xl" />
         <span>Kembali</span>
       </b>
