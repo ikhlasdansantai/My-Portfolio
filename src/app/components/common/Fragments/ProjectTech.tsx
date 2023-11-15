@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ProjectTech({ technology }: any) {
+export default function ProjectTech({ technology }: { technology: string[] }) {
   return (
     <div className="project__tech__used flex flex-wrap gap-3">
       {technology.map((tech, index) => (

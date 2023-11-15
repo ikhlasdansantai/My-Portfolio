@@ -1,6 +1,14 @@
 import ProjectTech from "./ProjectTech";
 
-export default function ProjectCategory({ category, links, technology }: any) {
+type projectCategoryProps = {
+  category: string;
+  links: {
+    livePreview: string;
+  };
+  technology: string[];
+};
+
+export default function ProjectCategory({ category, links, technology }: projectCategoryProps) {
   const { livePreview } = links;
 
   if (category === "web development") {

@@ -11,7 +11,7 @@ interface Projects {
   url: string;
   description: string;
   category: string;
-  links: any;
+  links: string[];
   technology: string[];
 }
 
@@ -33,7 +33,7 @@ export default function ProjectCard({ projects }: ProjectCardProps) {
   if (category === "semua kategori") {
     return (
       <div className="text-white grid sm:grid-cols-2 gap-10">
-        {projects.map(({ name, url, description, category, links, technology }, index): any => (
+        {projects.map(({ name, url, description, category, links, technology }, index) => (
           <div
             key={index}
             onClick={() => {
@@ -69,7 +69,7 @@ export default function ProjectCard({ projects }: ProjectCardProps) {
 
   return (
     <div className="text-white grid md:grid-cols-2 gap-10 ">
-      {projFilter.map(({ name, url, description, category, links, technology }, index): any => (
+      {projFilter.map(({ name, url, description, category, links, technology }, index) => (
         <div
           key={index}
           onClick={() => {

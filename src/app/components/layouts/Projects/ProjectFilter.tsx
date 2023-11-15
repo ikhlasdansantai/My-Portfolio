@@ -10,7 +10,7 @@ interface Projects {
   url: string;
   description: string;
   category: string;
-  links: any;
+  links: string[];
   technology: string[];
 }
 
