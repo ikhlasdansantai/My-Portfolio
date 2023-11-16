@@ -18,10 +18,6 @@ export default function Navbar() {
     { label: "Blogs", href: "/blogs" },
   ];
 
-  // const [scrollClass, setScrollClass] = useState({
-  //   bgClass: window.innerWidth < 640 ? "" : "",
-  //   textClass: window.innerWidth < 640 ? "text-black" : "",
-  // });
   const [scrollClass, setScrollClass] = useState({
     bgClass: "",
     textClass: "text-black",
