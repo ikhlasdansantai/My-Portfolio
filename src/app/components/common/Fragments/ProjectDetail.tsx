@@ -18,9 +18,9 @@ export default function ProjectDetail() {
   return (
     <div
       className={classNames({
-        "translate-y-0 opacity-100": showProjDetail === true,
+        "translate-y-0 opacity-100 duration-700 transition": showProjDetail === true,
         "translate-y-full opacity-30": showProjDetail === false,
-        "fixed top-0 left-0 right-0 bottom-0 z-[99999999] min-h-screen overflow-y-scroll bg-[#1e1f2b] px-4 py-8 text-white space-y-10 duration-700 transition max-w-6xl mx-auto": true,
+        "fixed top-0 left-0 right-0 bottom-0 z-[99999999] min-h-screen overflow-y-scroll bg-[#1e1f2b] px-4 py-8 text-white space-y-10 max-w-6xl mx-auto": true,
       })}
     >
       <b
