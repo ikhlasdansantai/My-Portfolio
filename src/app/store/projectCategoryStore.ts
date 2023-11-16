@@ -24,7 +24,6 @@ export const useProjectStore = create<projectState>((set) => ({
   },
   setShowProjDetail: (bool: boolean) => {
     set({ showProjDetail: bool });
-    console.log(`Store berubah jadi ${bool}`);
   },
   fetchingProject: async (url: any) => {
     try {
