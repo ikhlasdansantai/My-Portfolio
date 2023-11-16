@@ -15,7 +15,9 @@ export default function SkillList() {
 
   async function getTechList() {
     try {
-      const res = await fetch("api/skills");
+      const res = await fetch("api/skills", {
+        cache: "no-store",
+      });
       if (res.ok) {
         const data = await res.json();
         setSkillsList(data.data);

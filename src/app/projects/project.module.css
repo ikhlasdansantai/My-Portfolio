@@ -1,0 +1,6 @@
+@media (min-width: 768px) {
+  .grid__temp {
+    /* border: 2px solid red; */
+    grid-template-columns: 40% 60%;
+  }
+}
