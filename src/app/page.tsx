@@ -1,6 +1,12 @@
 import Image from "next/image";
 import spiderWeb from "../assets/spider-web.png";
 import test from "../assets/test.png";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ikhlasdansantai",
+  description: "self taught programmer",
+};
 
 export default function Home() {
   return (
