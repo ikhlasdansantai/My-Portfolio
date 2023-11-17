@@ -16,7 +16,7 @@ export default function Page() {
           <b className="bg__text__heading">Overview</b>
         </h1>
         <p className="text-white/[.60]">
-          Saya adalah seorang frontend web dev yang beffokus pada ReactJS💻. Saat ini, saya tengah mengejar pemahaman yang lebih dalam tentang penggunaan NextJS dalam pembuatan website 🚀. Selain itu, saya juga memiliki kemampuan dalam
+          Saya adalah seorang frontend web dev yang berfokus pada ReactJS💻. Saat ini, saya tengah mengejar pemahaman yang lebih dalam tentang penggunaan NextJS dalam pembuatan website 🚀. Selain itu, saya juga memiliki kemampuan dalam
           pengembangan website dengan menggunakan VueJS 📈. Saya mahir dalam melakukan slicing design dan menjadikannya responsif. 🎨 Saya senang belajar teknologi baru dan meningkatkan kemampuan saya sebagai seorang developer. 📚
         </p>
       </div>
