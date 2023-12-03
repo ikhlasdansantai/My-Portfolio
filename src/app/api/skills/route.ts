@@ -6,37 +6,37 @@ export async function GET() {
       id: 1,
       name: "Web Design",
       icon: "ic:baseline-monitor",
-      description: "I ensure that your website looks professional and stunning, attracting visitors to engage with your business",
+      description: "Saya pastikan situs website Anda terlihat profesional dan menawan, sehingga menarik pengunjung untuk berinteraksi dengan bisnis Anda.",
     },
     {
       id: 2,
       name: "Slicing Design",
       icon: "bi:image",
-      description: "I ensure that your website looks professional and stunning, attracting visitors to engage with your business",
+      description: "Dengan kemahiran slicing saya, saya siap mengubah design website anda menjadi website profesional sehingga menjadi mobile friendly dan tentunya pixel perfect.",
     },
     {
       id: 3,
       name: "FrontEnd Developer",
       icon: "material-symbols:code",
-      description: "I use the latest technology in frontend development to ensure that your website looks modern and efficient.",
+      description: "Dengan memanfaatkan teknologi frontend terkini, saya menjamin bahwa situs website Anda akan tampil modern dan juga efisien.",
     },
     {
       id: 4,
       name: "Web Development",
       icon: "octicon:stack-16",
-      description: "Is your business big and do you want everyone to know about it? I can help create it for you.",
+      description: "Apakah bisnis Anda ingin dikenal oleh semua orang dan bisa memasarkan bisnis Anda? saya akan bantu buatkan untuk Anda.",
     },
     {
       id: 5,
       name: "Web Application",
       icon: "ph:brackets-curly-bold",
-      description: "I can develop a well-structured website with a focus on performance, security, and functionality.",
+      description: "Saya bisa membuat website anda terstruktur dengan baik dengan fokus utamanya adalah performa, security, functionality, dan juga SEO.",
     },
     {
       id: 6,
       name: "Motion Graphics",
       icon: "mingcute:video-fill",
-      description: "I can create engaging Motion Graphics with Emphasis on Visual Appeal, Storytelling, and Creativity.",
+      description: "Saya bisa membuat video Motion Graphics dengan fokus utamanya adalah, visual Appeal, Storytelling, dan juga kreatifitas.",
     },
   ];
   return NextResponse.json({ status: 200, message: "Success", data });
