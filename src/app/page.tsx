@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-1 py-10 sm:py-20 xl:p-0 gap-4 md:gap-0 justify-center md:grid-cols-2 px-4 h-screen items-center max-w-6xl mx-auto min-[2000px]:h-[40rem]">
+    <main className="grid grid-cols-1 py-10 sm:py-20 xl:p-0 gap-4 md:gap-0 justify-center md:grid-cols-2 px-4 min-h-[90vh] items-center max-w-6xl mx-auto min-[2000px]:h-[40rem]">
       <div className="left w-full">
         <div className="profile__titles max-[360px]:py-8">
           <h1 className="flex flex-col max-[360px]:text-2xl text-3xl sm:text-4xl lg:text-[3rem] lg:leading-[54px] text-white sm:space-y-4">
             <span>Hi, nama saya</span>
             <b>M.Ikhsan Nuryaman</b>
           </h1>
-          <p className="mt-4 text-white/[.60] lg:text-lg leading-[1.875rem] xl:max-w-[43ch]">Saya seorang Front End Web Developer, Pecinta Musik, warga Muhammadiyah, dan berkeinginan untuk menjadi seorang fullstack javascript Developer.</p>
+          <p className="mt-4 text-white/[.60] lg:text-lg leading-[1.875rem] xl:max-w-[43ch]">Saya seorang Front End Web Developer, Pecinta Musik, dan berkeinginan untuk menjadi seorang fullstack javascript Developer.</p>
         </div>
         <div className="additional__profile__info flex gap-8 max-[360px]:mt-4 mt-11">
           <div className="projects space-y-3">
