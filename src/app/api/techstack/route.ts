@@ -55,6 +55,11 @@ export async function GET() {
     {
       name: "NextJS",
       url: "https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/NextJS-Dark.svg",
+      status: "Intermediate",
+    },
+    {
+      name: "Prisma",
+      url: "https://raw.githubusercontent.com/tandpfun/skill-icons/de91fca307a83d75fc5b1f6ce24540454acead41/icons/Prisma.svg",
       status: "Beginner",
     },
     {
