@@ -7,11 +7,12 @@ import { useProjectStore } from "@/app/store/projectCategoryStore";
 import { useShallow } from "zustand/react/shallow";
 
 export default function ProjectDetail() {
-  const { showProjDetail, setProjDetail, getProjectDetail } = useProjectStore(
+  const { showProjDetail, setProjDetail, getProjectDetail, setProjectDetail } = useProjectStore(
     useShallow((state) => ({
       showProjDetail: state.showProjDetail,
       setProjDetail: state.setShowProjDetail,
       getProjectDetail: state.getProjectDetail,
+      setProjectDetail: state.setProjectDetail,
     }))
   );
 
@@ -26,6 +27,9 @@ export default function ProjectDetail() {
       <b
         onClick={() => {
           setProjDetail(false);
+          setProjectDetail(null);
+
+          console.log("KOSONGGGGGGG");
           document.title = "Projects";
         }}
         className="flex items-center cursor-pointer"
@@ -34,7 +38,9 @@ export default function ProjectDetail() {
         <span>Kembali</span>
       </b>
       {getProjectDetail === null ? (
-        <p>Tunggu Sebentar...</p>
+        <div className="proj__detail__contens">
+          <p className="text-white">Tunggu Sebentar...</p>
+        </div>
       ) : (
         <div className="proj__detail__contens">
           <h2 className="text-xl my-4 font-semibold">{getProjectDetail.name}</h2>
@@ -46,7 +52,7 @@ export default function ProjectDetail() {
               width={400}
               style={{ width: "100%", height: "auto" }}
               loading="lazy"
-              quality={100}
+              quality={80}
               className={classNames({
                 "blur-[7px]": getProjectDetail.category === "wip",
               })}

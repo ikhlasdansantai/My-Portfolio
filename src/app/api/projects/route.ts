@@ -170,7 +170,18 @@ export async function GET() {
         livePreview: "https://ikhlasdansantai.github.io/Hangeulin/",
       },
       technology: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "https://cdn.simpleicons.org/tailwindcss/06B6D4.svg"],
-      category: "web devlopment",
+      category: "web development",
+    },
+    {
+      id: 12,
+      name: "Introvert Club",
+      url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/projects/Introvert-Club-Community.png",
+      description: "Mencoba untuk membangun sebuah website dengan Framework vueJS",
+      links: {
+        livePreview: "https://introvert-club.vercel.app/",
+      },
+      technology: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg", "https://cdn.simpleicons.org/tailwindcss/06B6D4.svg"],
+      category: "web development",
     },
     {
       id: 12,

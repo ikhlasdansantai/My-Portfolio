@@ -29,7 +29,6 @@ export default function CertificateCard() {
 
   if (certificates === null) return <p className="text-white">Loading....</p>;
   if (certificates.length === 0) return <p className="text-white">No certificates available.</p>;
-  else console.log("Ready");
 
   return (
     <>
