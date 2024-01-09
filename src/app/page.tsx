@@ -1,6 +1,6 @@
 import Image from "next/image";
 import spiderWeb from "../assets/spider-web.png";
-import test from "../assets/test.png";
+import profileImg from "/public/profile_update_january.png";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function Home() {
       <div className="right relative ml-auto">
         <figure className="w-full relative z-10">
           <Image
-            src={test}
+            src={profileImg}
             alt="spider web PNG"
             style={{
               width: "100%",
