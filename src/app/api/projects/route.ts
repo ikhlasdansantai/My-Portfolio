@@ -79,6 +79,21 @@ export async function GET() {
     },
     {
       id: 2,
+      name: "Jobfinder",
+      url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/v.2/assets/projects/Proj/Jobfinder.png",
+      description: "Sebuah Website yang dibuat secara fullstack (mini-fullstack), dimana peran kita sebagai admin, dan bisa melakukan posting program, mengedit program, dan juga menghapus program",
+      links: {
+        livePreview: "https://jobfinder-mini-crud.vercel.app",
+      },
+      technology: [
+        "https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/NextJS-Dark.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "https://cdn.simpleicons.org/tailwindcss/06B6D4.svg",
+      ],
+      category: "web development",
+    },
+    {
+      id: 2,
       name: "BWA Slicing Challenge",
       url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/projects/Proj/Build-With-Angga-Challenge-new.png",
       description: "Projek Challenge pertama menggunakan Bootstrap dengan design UI dari BuildWithAngga (instagram)",
