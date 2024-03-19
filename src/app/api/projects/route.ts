@@ -19,6 +19,66 @@ export async function GET() {
     },
     {
       id: 2,
+      name: "Iksplorasi",
+      url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/v.2/assets/projects/Proj/iksplorasi.png",
+      description: "Website yang ditunjukan untuk mengeksplorasi teknologi-teknologi terbaru, (sebagian besar masih dalam proses development)",
+      links: {
+        livePreview: "https://iksplorasi.vercel.app",
+      },
+      technology: [
+        "https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/NextJS-Dark.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "https://cdn.simpleicons.org/tailwindcss/06B6D4.svg",
+      ],
+      category: "web development",
+    },
+    {
+      id: 2,
+      name: "Sejarah Perang dunia Ke-2",
+      url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/v.2/assets/projects/Proj/spd_LP.png",
+      description: "Platform online yang membuat orang menjadi suka belajar sejarah",
+      links: {
+        livePreview: "https://sejarahperangdunia.vercel.app",
+      },
+      technology: [
+        "https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/NextJS-Dark.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "https://cdn.simpleicons.org/tailwindcss/06B6D4.svg",
+      ],
+      category: "web development",
+    },
+    {
+      id: 2,
+      name: "Indihome Jabar",
+      url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/v.2/assets/projects/Proj/indihome-jabar.png",
+      description: "website company profile dari Indihome Jabar yang dibuat menggunakan teknologi front-end terkini dan modern",
+      links: {
+        livePreview: "https://www.indihomejabar.com",
+      },
+      technology: [
+        "https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/NextJS-Dark.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "https://cdn.simpleicons.org/tailwindcss/06B6D4.svg",
+      ],
+      category: "web development",
+    },
+    {
+      id: 2,
+      name: "Edufree (Slicing Challenge)",
+      url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/v.2/assets/projects/Proj/Edufree-Slicing.png",
+      description: "Sebuah bagian dari sesi tech interview, dengan membuat clone/slicing dari design figma, dan pada kesempatan ini, saya memilih design ini (Edufree), sebagai pilihan untuk saya melakukan slicing design",
+      links: {
+        livePreview: "https://edufree-mini-slicing.vercel.app",
+      },
+      technology: [
+        "https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/NextJS-Dark.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "https://cdn.simpleicons.org/tailwindcss/06B6D4.svg",
+      ],
+      category: "web development",
+    },
+    {
+      id: 2,
       name: "BWA Slicing Challenge",
       url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/projects/Proj/Build-With-Angga-Challenge-new.png",
       description: "Projek Challenge pertama menggunakan Bootstrap dengan design UI dari BuildWithAngga (instagram)",

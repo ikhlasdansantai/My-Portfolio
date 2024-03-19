@@ -20,6 +20,49 @@ interface MediumBlogItem {
   thumbnail: string;
 }
 
+function BlogLoading() {
+  return (
+    <>
+      <div className="blog__card__container grid grid-cols-2 justify-between gap-20 items-stretch lg:w-[60%] mr-auto">
+        <div className="titles">
+          <p className="animate-pulse py-6 bg-gray-400 rounded-lg"></p>
+          <p className="animate-pulse inline-block py-2 w-10/12 mt-2 bg-gray-400 rounded-lg"></p>
+          <div className="tags flex space-x-2">
+            <p className="animate-pulse block py-2 w-12 mt-2 bg-gray-400 rounded-lg"></p>
+            <p className="animate-pulse block py-2 w-12 mt-2 bg-gray-400 rounded-lg"></p>
+            <p className="animate-pulse block py-2 w-12 mt-2 bg-gray-400 rounded-lg"></p>
+          </div>
+        </div>
+        <div className="h-60 bg-slate-400 animate-pulse"></div>
+      </div>
+      <div className="blog__card__container grid grid-cols-2 justify-between gap-20 items-stretch lg:w-[60%] mr-auto">
+        <div className="titles">
+          <p className="animate-pulse py-6 bg-gray-400 rounded-lg"></p>
+          <p className="animate-pulse inline-block py-2 w-10/12 mt-2 bg-gray-400 rounded-lg"></p>
+          <div className="tags flex space-x-2">
+            <p className="animate-pulse block py-2 w-12 mt-2 bg-gray-400 rounded-lg"></p>
+            <p className="animate-pulse block py-2 w-12 mt-2 bg-gray-400 rounded-lg"></p>
+            <p className="animate-pulse block py-2 w-12 mt-2 bg-gray-400 rounded-lg"></p>
+          </div>
+        </div>
+        <div className="h-60 bg-slate-400 animate-pulse"></div>
+      </div>
+      <div className="blog__card__container grid grid-cols-2 justify-between gap-20 items-stretch lg:w-[60%] mr-auto">
+        <div className="titles">
+          <p className="animate-pulse py-6 bg-gray-400 rounded-lg"></p>
+          <p className="animate-pulse inline-block py-2 w-10/12 mt-2 bg-gray-400 rounded-lg"></p>
+          <div className="tags flex space-x-2">
+            <p className="animate-pulse block py-2 w-12 mt-2 bg-gray-400 rounded-lg"></p>
+            <p className="animate-pulse block py-2 w-12 mt-2 bg-gray-400 rounded-lg"></p>
+            <p className="animate-pulse block py-2 w-12 mt-2 bg-gray-400 rounded-lg"></p>
+          </div>
+        </div>
+        <div className="h-60 bg-slate-400 animate-pulse"></div>
+      </div>
+    </>
+  );
+}
+
 export default function BlogCard() {
   const [Blogs, setBlogs] = useState<MediumBlogResponse | null>(null);
   async function getMediumBlog() {
@@ -40,7 +83,7 @@ export default function BlogCard() {
     getMediumBlog();
   }, []);
 
-  if (Blogs === null) return <p className="text-white">Loading...</p>;
+  if (Blogs === null) return <BlogLoading />;
 
   return (
     <Link href={Blogs.feed.link} target="_parent" className="blog__cards space-y-14">
