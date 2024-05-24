@@ -248,7 +248,7 @@ export async function GET() {
       category: "web development",
     },
     {
-      id: 12,
+      id: 13,
       name: "Introvert Club",
       url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/projects/Introvert-Club-Community.png",
       description: "Mencoba untuk membangun sebuah website dengan Framework vueJS",
@@ -259,7 +259,23 @@ export async function GET() {
       category: "web development",
     },
     {
-      id: 12,
+      id: 14,
+      name: "React Native Learning Journey With Expo",
+      url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/projects/react-native-journey.PNG",
+      description: "Memahami cara membuat aplikasi mobile sederhana menggunakan React Native dengan Expo, serta mendokumentasikan daftar materi yang telah dipelajari saat mengembangkan setiap fitur.",
+      links: {
+        livePreview: "https://github.com/ikhlasdansantai/react-native-jouney",
+      },
+      technology: [
+        "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/androidstudio/androidstudio-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.simpleicons.org/tailwindcss/06B6D4.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      ],
+      category: "mobile",
+    },
+    {
+      id: 15,
       name: "Camp Yang Paling Mengerikan Di Era ww2",
       url: "https://img.youtube.com/vi/BW9glb4e0lM/maxresdefault.jpg",
       description: "Menceritakan tentang kejahatan perang yang dilakukan oleh nasi jerman di era perang dunia ke 2, di video ini saya menjelaskan tentang salah satu camp konsentrasi jerman, yaitu Dachau",
@@ -274,7 +290,7 @@ export async function GET() {
       category: "motion graphics",
     },
     {
-      id: 12,
+      id: 16,
       name: "tebak 1",
       url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/projects/Proj/ive.png",
       description: "masih di rahasiakan, tapi jika kamu tau proyek apa ini, berarti anda adalah seorang fans :D",
@@ -285,7 +301,7 @@ export async function GET() {
       category: "wip",
     },
     {
-      id: 12,
+      id: 17,
       name: "tebak 2",
       url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/projects/Proj/isone-docs.png",
       description: "masih di rahasiakan, tapi jika kamu tau proyek apa ini, berarti anda adalah seorang fans :D",

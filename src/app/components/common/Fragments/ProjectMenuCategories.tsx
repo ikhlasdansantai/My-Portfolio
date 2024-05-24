@@ -15,7 +15,7 @@ export default function ProjectMenuCategories() {
   type menuProps = {
     label: string;
   };
-  const menus: menuProps[] = [{ label: "Semua Kategori" }, { label: "Web Development" }, { label: "UI Design" }, { label: "Motion Graphics" }, { label: "wip" }];
+  const menus: menuProps[] = [{ label: "Semua Kategori" }, { label: "Web Development" }, { label: "UI Design" }, { label: "Mobile" }, { label: "Motion Graphics" }, { label: "wip" }];
 
   return (
     <>

@@ -41,6 +41,21 @@ export default function ProjectCategory({ category, links, technology }: project
         </div>
       </>
     );
+  } else if (category === "mobile") {
+    return (
+      <>
+        <div className="box space-y-2">
+          <h3 className="font-medium">Readme</h3>
+          <a href={livePreview} className="text-white/[.60]">
+            {livePreview}
+          </a>
+        </div>
+        <div className="box space-y-2">
+          <h3 className="font-medium">Tech Stack</h3>
+          <ProjectTech technology={technology} />
+        </div>
+      </>
+    );
   } else if (category === "wip") {
     return (
       <div className="box space-y-2">

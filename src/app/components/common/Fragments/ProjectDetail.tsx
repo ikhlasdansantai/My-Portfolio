@@ -29,7 +29,6 @@ export default function ProjectDetail() {
           setProjDetail(false);
           setProjectDetail(null);
 
-          console.log("KOSONGGGGGGG");
           document.title = "Projects";
         }}
         className="flex items-center cursor-pointer"
