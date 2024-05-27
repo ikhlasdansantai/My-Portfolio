@@ -25,7 +25,7 @@ export async function GET() {
     },
     {
       id: 2,
-      name: "Pemrograman JavaScript untuk Pemula Sampai Hampir",
+      name: "Pemrograman JavaScript untuk Pemula Sampai Mahir",
       date: "27 May 2022",
       url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/certificates/PZN-JavaScript.jpeg",
       source: "PZN",
