@@ -311,6 +311,17 @@ export async function GET() {
       technology: [""],
       category: "wip",
     },
+    {
+      id: 17,
+      name: "tebak 3",
+      url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/v.2/assets/projects/Proj/karirku.png",
+      description: "masih di rahasiakan, tapi jika kamu tau proyek apa ini, berarti anda adalah seorang fans :D",
+      links: {
+        livePreview: "",
+      },
+      technology: [""],
+      category: "wip",
+    },
   ];
   return NextResponse.json({ status: 200, message: "Success", data });
 }
