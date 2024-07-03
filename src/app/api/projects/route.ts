@@ -19,6 +19,21 @@ export async function GET() {
     },
     {
       id: 2,
+      name: "Architect Portolio",
+      url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/v.2/assets/projects/Proj/architect-portfolio.png",
+      description: "Website portfolio untuk seorang arsitek",
+      links: {
+        livePreview: "https://dennes-rizky-shadewa.vercel.app/",
+      },
+      technology: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "https://cdn.simpleicons.org/tailwindcss/06B6D4.svg",
+      ],
+      category: "web development",
+    },
+    {
+      id: 2,
       name: "Iksplorasi",
       url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/v.2/assets/projects/Proj/iksplorasi.png",
       description: "Website yang ditunjukan untuk mengeksplorasi teknologi-teknologi terbaru, (sebagian besar masih dalam proses development)",
