@@ -1,7 +1,6 @@
 .tech:hover {
   transition: 300ms;
 }
-
 .tech:hover .tech__pict {
   transform: scale(1.1);
   transition: 300ms;

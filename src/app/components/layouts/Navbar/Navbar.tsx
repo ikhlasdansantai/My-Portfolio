@@ -15,11 +15,11 @@ export default function Navbar() {
     { label: "Overview", href: "/overview" },
     { label: "Skills", href: "/skills" },
     { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" },
+    { label: "Blogs", href: "/blogs" },
   ];
 
   const [scrollClass, setScrollClass] = useState({
-    bgClass: window.innerWidth < 640 ? "bg-white" : "",
+    bgClass: window.innerWidth < 640 ? "" : "",
     textClass: window.innerWidth < 640 ? "text-black" : "",
   });
 
@@ -28,12 +28,12 @@ export default function Navbar() {
     console.log(window.innerWidth);
     if (window.innerWidth < 640) {
       setScrollClass({
-        bgClass: "bg-white",
+        bgClass: "",
         textClass: "text-black",
       });
     } else {
       setScrollClass({
-        bgClass: isScrolled ? "bg-slate-300" : "",
+        bgClass: isScrolled ? "bg-slate-500" : "",
         textClass: isScrolled ? "text-black" : "text-white",
       });
     }
@@ -52,7 +52,9 @@ export default function Navbar() {
     <nav className={`fixed  md:left-0 right-0  z-50 transition-bg transition-text duration-300 ${scrollClass.bgClass}`}>
       <div className="nav__contents md:px-4 xl:px-0 flex justify-between items-center max-w-6xl mx-auto md:py-6">
         <div className="left__navbar hidden md:flex gap-10">
-          <div className="block py-4 px-5 text-center rounded-md bg-[#2ba386] text-white">IK</div>
+          <Link href={"/"} className="block py-4 px-5 text-center rounded-md bg-[#2ba386] text-white">
+            IK
+          </Link>
           <ul className="hidden md:flex  justify-between items-center gap-10">
             {links.map(({ label, href }, index): LinkProps | any => (
               <Link
@@ -72,17 +74,24 @@ export default function Navbar() {
         </div>
         <div className="px-4 py-3 md:py-4 rounded-md bg-[#2ba386] text-white">Punya Project?</div>
 
-        {/* <ul className="nav_bottom fixed bottom-0 left-0 right-0 px-6 py-4 bg-[#1e1f2b] border-t-2 border-l-2 border-r-2 rounded-tl-lg rounded-tr-lg flex justify-between md:hidden text-white/[.60]">
-        <li className="border-b-4 border-[#2ba386]">Home</li>
-        <li>Skills</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
-      </ul> */}
+        <ul className="nav_bottom fixed bottom-0 left-0 right-0 px-6 py-6 bg-[#1e1f2b] border-t-2 border-l-2 border-r-2 rounded-tl-lg rounded-tr-lg flex justify-between md:hidden text-white/[.60]">
+          {links.map(({ label, href }, index): LinkProps | any => (
+            <Link
+              key={index}
+              href={href}
+              className={classNames({
+                "text-white font-semibold border-b": href === currentPath,
+                "text-white/[.60]": href !== currentPath,
+                "text-black": scrollClass.textClass === "text-black",
+                "transition duration-300 max-[350px]:text-sm": true,
+              })}
+            >
+              {label}
+            </Link>
+          ))}
+        </ul>
       </div>
     </nav>
   );
 }
 
-{
-  /* <nav className="fixed hidden px-4 xl:px-0 left-0 right-0 lg:flex justify-between items-center max-w-6xl mx-auto py-8"> */
-}
