@@ -1,6 +1,6 @@
 import Image from "next/image";
 import spiderWeb from "../assets/spider-web.png";
-import profileImg from "/public/profile_update_january.png";
+import profileImg from "/public/profile_update_september.png";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,12 +17,14 @@ export default function Home() {
             <span>Hi, nama saya</span>
             <b>M.Ikhsan Nuryaman</b>
           </h1>
-          <p className="mt-4 text-white/[.60] lg:text-lg leading-[1.875rem] xl:max-w-[43ch]">Saya adalah software engineer yang berfokus pada pengembangan website dan juga mobile di sisi end user, Serta seorang UI designer.</p>
+          <p className="mt-4 text-white/[.60] lg:text-lg leading-[1.875rem] xl:max-w-[43ch]">
+            Saya adalah seorang fullstack designer yang berfokus pada pengembangan website dan juga mobile, menggabungkan keterampilan teknis dengan desain yang user-friendly.
+          </p>
         </div>
         <div className="additional__profile__info flex gap-8 max-[360px]:mt-4 mt-11">
           <div className="projects space-y-3">
             <p className="text-white/[.60] text-xs">Projects</p>
-            <b className=" font-semibold text-white">12</b>
+            <b className=" font-semibold text-white">20</b>
           </div>
           <div className="experience space-y-3">
             <p className="text-white/[.60] text-xs">Pengalaman</p>
