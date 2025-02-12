@@ -14,7 +14,6 @@ export default function BlogCard() {
       });
       if (res.ok) {
         const data = await res.json();
-        // console.log(data);
         setBlogs(data as MediumBlogResponse);
       } else console.error("Server Internal Error");
     } catch (e) {
