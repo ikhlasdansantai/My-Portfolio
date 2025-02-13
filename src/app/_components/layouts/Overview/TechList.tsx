@@ -2,43 +2,41 @@
 
 import { useState, useEffect } from "react";
 import TechListCard from "../../common/Fragments/TechListCard";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
+import type { Tech } from "@/app/types";
 
-interface Tech {
-  id: number;
-  name: string;
-  url: string;
-  status: string;
-}
-
-export default function TechList() {
+export default function TechList({ level }: { level: string }) {
   const [TechList, setTechList] = useState<Tech[] | null>(null);
+  const [parent, enableAnimations] = useAutoAnimate();
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
   async function getTechList() {
     try {
       const res = await fetch("api/techstack");
       if (res.ok) {
         const data = await res.json();
-        setTechList(data.data);
+        const filteredTechStack = data.data.filter((tech: any) => tech.status === level).sort((a: any, b: any) => a.name.localeCompare(b.name));
+        level !== "All" ? setTechList(filteredTechStack) : setTechList(data.data);
       } else {
-        console.error("Server internal Error");
+        setErrorMsg("Failed to fetch Tech stack data. Please try again later :)");
       }
-    } catch (e) {
-      console.error(e);
+    } catch (e: Error | any) {
+      setErrorMsg(e);
     }
   }
 
   useEffect(() => {
     getTechList();
-  }, []);
+  }, [level]);
 
+  if (errorMsg) return <p className="text-red-400">{errorMsg}</p>;
   if (TechList === null) return <p className="text-white">Loading...</p>;
 
   return (
-    <>
-      <div className="tech__stack max-[350px]:grid-cols-1 grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 group">
-        {TechList.map((tech) => (
-          <TechListCard key={tech.id} name={tech.name} url={tech.url} status={tech.status} />
-        ))}
-      </div>
-    </>
+    <div ref={parent} className="grid max-[350px]:grid-cols-1 gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 group">
+      {TechList.map(({ name, url, status }) => (
+        <TechListCard key={name} name={name} url={url} status={status} />
+      ))}
+    </div>
   );
 }
