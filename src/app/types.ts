@@ -13,3 +13,17 @@ export interface MediumBlogItem {
   categories: string[];
   image: string;
 }
+
+export type Tech = {
+  id: number;
+  name: string;
+  url: string;
+  status: string;
+};
+
+export enum SkillLevel {
+  All = "All",
+  Beginner = "Beginner",
+  Intermediate = "Intermediate",
+  Advanced = "Advanced",
+}
