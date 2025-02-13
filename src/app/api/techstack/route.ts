@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import piniaImg from "/public/pinia-seeklogo.png";
 
 export async function GET() {
   const data = [
@@ -15,7 +16,7 @@ export async function GET() {
     {
       name: "Figma",
       url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-      status: "Intermediate",
+      status: "Advanced",
     },
     {
       name: "Github",
@@ -30,7 +31,7 @@ export async function GET() {
     {
       name: "TypeScript",
       url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-      status: "Beginner",
+      status: "Advanced",
     },
     {
       name: "TailwindCSS",
@@ -40,7 +41,12 @@ export async function GET() {
     {
       name: "Bootstrap",
       url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-      status: "Intermediate",
+      status: "Advanced",
+    },
+    {
+      name: "Material UI",
+      url: "https://svgmix.com/uploads/5b99f5-material-ui.svg",
+      status: "Beginner",
     },
     {
       name: "ReactJS",
@@ -50,6 +56,16 @@ export async function GET() {
     {
       name: "VueJS",
       url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+      status: "Intermediate",
+    },
+    {
+      name: "Zustand",
+      url: "https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg",
+      status: "Beginner",
+    },
+    {
+      name: "Pinia",
+      url: piniaImg,
       status: "Beginner",
     },
     {
@@ -63,6 +79,16 @@ export async function GET() {
       status: "Beginner",
     },
     {
+      name: "PostgreSQL",
+      url: "https://www.svgrepo.com/show/303301/postgresql-logo.svg",
+      status: "Beginner",
+    },
+    {
+      name: "PHP",
+      url: "https://www.php.net//images/logos/new-php-logo.svg",
+      status: "Beginner",
+    },
+    {
       name: "NodeJS",
       url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       status: "Beginner",
@@ -70,11 +96,6 @@ export async function GET() {
     {
       name: "ExpressJS",
       url: "https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/ExpressJS-Dark.svg",
-      status: "Beginner",
-    },
-    {
-      name: "MongoDB",
-      url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
       status: "Beginner",
     },
     {
