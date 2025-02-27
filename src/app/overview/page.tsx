@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Certificate from "../_components/layouts/Overview/certificates/Certificate";
-import Image from "next/image";
 import TechStackSection from "../_components/layouts/Overview/TechStackSection";
+import BadgeLists from "../_components/containers/BadgeLists";
 
 export const metadata: Metadata = {
   title: "Overview | ikhlasdansantai",
@@ -28,23 +28,7 @@ export default function Page() {
       </div>
       <div className="certificate__contents">
         <h2 className="text-white mb-4 font-semibold text-lg">Badges</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          <div className="pt-4 px-4 pb-6 bg-white/[.03] text-center rounded-lg">
-            <figure className="rounded-md overflow-hidden">
-              <Image
-                src={"https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/refs/heads/v.2/assets/projects/badges/thm-hc.png"}
-                alt="gambar"
-                height="400"
-                width="400"
-                style={{ width: "100%", height: "auto" }}
-                loading="lazy"
-                quality={100}
-              />
-            </figure>
-            <h2 className="text-white mt-4 mb-1">Hash Cracker</h2>
-            <span className="text-white/[.60] text-xs">TryHackMe</span>
-          </div>
-        </div>
+        <BadgeLists />
       </div>
     </main>
   );
