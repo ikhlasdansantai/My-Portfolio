@@ -1,12 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import spiderWeb from "../assets/spider-web.png";
 import profileImg from "/public/profile_update_september.png";
 import type { Metadata } from "next";
+import ethicalHacker from "../../assets/projects/badges/ethical-hacker.png";
+import IntroCyber from "../../assets/projects/badges/itc.png";
+import { Tooltip } from "react-tooltip";
 
-export const metadata: Metadata = {
-  title: "ikhlasdansantai",
-  description: "self taught programmer",
-};
+// export const metadata: Metadata = {
+//   title: "ikhlasdansantai",
+//   description: "self taught programmer",
+// };
 
 export default function Home() {
   return (
@@ -29,6 +34,21 @@ export default function Home() {
           <div className="experience space-y-3">
             <p className="text-white/[.60] text-xs">Pengalaman</p>
             <b className=" font-semibold text-white">1 Tahun+</b>
+          </div>
+          <div className="badges flex items-center gap-3">
+            <a href="https://www.credly.com/badges/6c75ea50-2dbf-4b51-8a3c-eb5ad509be33/public_url" target="_blank" data-tooltip-id="tooltip-ehn" data-tooltip-content="Ethical Hacker" className="text-white">
+              <figure className="w-12">
+                <Image src={ethicalHacker} alt="ethical-hacker-icon" className="block max-w-full" />
+              </figure>
+            </a>
+            <Tooltip id="tooltip-ehn" />
+
+            <a href="https://www.credly.com/badges/6d5e0a7e-2fdd-4b11-b983-7f01eeb1e83a/public_url" target="_blank" data-tooltip-id="tooltip-itc" data-tooltip-content="Intro To CyberSec" className="text-white">
+              <figure className="w-12">
+                <Image src={IntroCyber} alt="itc-icon" className="block max-w-full" />
+              </figure>
+            </a>
+            <Tooltip id="tooltip-itc" />
           </div>
         </div>
       </div>
