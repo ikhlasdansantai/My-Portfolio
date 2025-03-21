@@ -65,6 +65,20 @@ export async function GET() {
       url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/certificates/dicoding-js.png",
       source: "Dicoding",
     },
+    {
+      id: 132,
+      name: "Introduction To Cyber Security",
+      date: "21 March 2025",
+      url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-PWTDKCDGSE.png",
+      source: "Tryhackme",
+    },
+    {
+      id: 12,
+      name: "Pre Security",
+      date: "21 March 2025",
+      url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-0DTBKPVRWF.png",
+      source: "Tryhackme",
+    },
   ];
   return NextResponse.json({ status: 200, message: "Success", data });
 }
