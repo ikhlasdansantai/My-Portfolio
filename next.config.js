@@ -38,6 +38,12 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "tryhackme-certificates.s3-eu-west-1.amazonaws.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
