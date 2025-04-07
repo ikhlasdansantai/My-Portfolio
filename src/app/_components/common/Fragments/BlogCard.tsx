@@ -9,7 +9,7 @@ export default function BlogCard() {
   const [Blogs, setBlogs] = useState<MediumBlogResponse | null>(null);
   async function getMediumBlog() {
     try {
-      const res = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@initesting5", {
+      const res = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ikhlasdansantai", {
         cache: "no-store",
       });
       if (res.ok) {
