@@ -79,6 +79,13 @@ export async function GET() {
       url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-0DTBKPVRWF.png",
       source: "Tryhackme",
     },
+    {
+      id: 12,
+      name: "Web Fundamentals",
+      date: "26 March 2025",
+      url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-MGBZJDVFQU.png",
+      source: "Tryhackme",
+    },
   ];
   return NextResponse.json({ status: 200, message: "Success", data });
 }
