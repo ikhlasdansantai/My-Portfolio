@@ -86,6 +86,13 @@ export async function GET() {
       url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-MGBZJDVFQU.png",
       source: "Tryhackme",
     },
+    {
+      id: 13,
+      name: "Jr.Penetration Tester",
+      date: "17 April 2025",
+      url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-CLV9J11WYE.png",
+      source: "Tryhackme",
+    },
   ];
   return NextResponse.json({ status: 200, message: "Success", data });
 }
