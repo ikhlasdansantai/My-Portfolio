@@ -1,4 +1,4 @@
-import CertificateCard from "@/app/components/common/CertificateCard";
+import CertificateCard from "@/app/_components/common/CertificateCard";
 
 export default function Certificate() {
   return (

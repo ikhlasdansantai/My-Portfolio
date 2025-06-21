@@ -1,4 +1,4 @@
-import ProjectMenuCategories from "@/app/components/common/Fragments/ProjectMenuCategories";
+import ProjectMenuCategories from "@/app/_components/common/Fragments/ProjectMenuCategories";
 
 export default function ProjectMenus() {
   return (

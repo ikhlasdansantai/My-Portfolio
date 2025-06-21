@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import classNames from "classnames";
-import ContactReady from "../components/containers/contactReady";
-import ContactNotReady from "../components/containers/ContactNotReady";
+import ContactReady from "../_components/containers/contactReady";
+import ContactNotReady from "../_components/containers/ContactNotReady";
 
 export const metadata: Metadata = {
   title: "Contact",

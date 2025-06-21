@@ -34,10 +34,8 @@ export default function ProjectFilter() {
 
   if (projects === null) return <p className="text-white">Sedang Dimuat...</p>;
   return (
-    <>
-      <Suspense fallback={<Loading />}>
-        <ProjectCard projects={projects} />
-      </Suspense>
-    </>
+    <Suspense fallback={<Loading />}>
+      <ProjectCard projects={projects} />
+    </Suspense>
   );
 }

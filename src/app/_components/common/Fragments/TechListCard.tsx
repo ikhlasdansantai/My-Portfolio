@@ -3,7 +3,7 @@ import styles from "./fragments.module.css";
 
 export default function TechListCard({ name, url, status }: { name: string; url: string; status: string }) {
   return (
-    <div className={`${styles.tech} tech group flex gap-3 justify-start items-center text-white border px-4 py-3 cursor-pointer`}>
+    <div className={`${styles.tech} group flex gap-3 justify-start items-center text-white border px-4 py-3 cursor-pointer max-h-[4.5rem]`}>
       <figure className={`${styles["tech__pict"]} text__pict w-8 transition-all`}>
         <Image src={url} alt={`${url} Image`} width={40} height={40} quality={100} loading="lazy" />
       </figure>

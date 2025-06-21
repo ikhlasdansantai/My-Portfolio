@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SkillList from "../components/layouts/Skills/SkillList";
+import SkillList from "../_components/layouts/Skills/SkillList";
 
 export const metadata: Metadata = {
   title: "Skills",

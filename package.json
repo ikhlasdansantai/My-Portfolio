@@ -1,6 +1,6 @@
 {
-  "name": "next-portfolio",
-  "version": "0.1.0",
+  "name": "ikhlasdansantai-portfolio",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.8.2",
     "classnames": "^2.3.2",
     "json-server": "^0.17.4",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
     "react-tooltip": "^5.24.0",
+    "sharp": "^0.33.1",
     "zustand": "^4.4.6"
   },
   "devDependencies": {

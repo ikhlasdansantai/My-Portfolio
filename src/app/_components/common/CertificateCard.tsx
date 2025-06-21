@@ -32,10 +32,10 @@ export default function CertificateCard() {
 
   return (
     <>
-      {certificates.map(({ name, url, source }, index) => (
-        <div key={index} className="pt-4 px-4 pb-6 bg-white/[.03] text-center rounded-lg">
+      {certificates.map(({ name, url, source }) => (
+        <div key={name} className="pt-4 px-4 pb-6 bg-white/[.03] text-center rounded-lg">
           <figure className="rounded-md overflow-hidden">
-            <Image src={url} alt="gambar" height="200" width="200" style={{ width: "100%", height: "auto" }} loading="lazy" quality={100} />
+            <Image src={url} alt="gambar" height="400" width="400" style={{ width: "100%", height: "auto" }} loading="lazy" quality={100} />
           </figure>
           <h2 className="text-white mt-4 mb-1">{name}</h2>
           <span className="text-white/[.60] text-xs">{source}</span>

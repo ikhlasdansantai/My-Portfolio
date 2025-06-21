@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import ProjectDetail from "../components/common/Fragments/ProjectDetail";
-import ProjectFilter from "../components/layouts/Projects/ProjectFilter";
-import ProjectMenus from "../components/layouts/Projects/ProjectMenus";
+import ProjectDetail from "../_components/common/Fragments/ProjectDetail";
+import ProjectFilter from "../_components/layouts/Projects/ProjectFilter";
+import ProjectMenus from "../_components/layouts/Projects/ProjectMenus";
 import styles from "./project.module.css";
 
 export const metadata: Metadata = {

@@ -25,7 +25,7 @@ export async function GET() {
     },
     {
       id: 2,
-      name: "Pemrograman JavaScript untuk Pemula Sampai Hampir",
+      name: "Pemrograman JavaScript untuk Pemula Sampai Mahir",
       date: "27 May 2022",
       url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/certificates/PZN-JavaScript.jpeg",
       source: "PZN",
@@ -64,6 +64,34 @@ export async function GET() {
       date: "27 May 2022",
       url: "https://raw.githubusercontent.com/ikhlasdansantai/My-Portfolio/main/assets/certificates/dicoding-js.png",
       source: "Dicoding",
+    },
+    {
+      id: 132,
+      name: "Introduction To Cyber Security",
+      date: "21 March 2025",
+      url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-PWTDKCDGSE.png",
+      source: "Tryhackme",
+    },
+    {
+      id: 12,
+      name: "Pre Security",
+      date: "21 March 2025",
+      url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-0DTBKPVRWF.png",
+      source: "Tryhackme",
+    },
+    {
+      id: 12,
+      name: "Web Fundamentals",
+      date: "26 March 2025",
+      url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-MGBZJDVFQU.png",
+      source: "Tryhackme",
+    },
+    {
+      id: 13,
+      name: "Jr.Penetration Tester",
+      date: "17 April 2025",
+      url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-CLV9J11WYE.png",
+      source: "Tryhackme",
     },
   ];
   return NextResponse.json({ status: 200, message: "Success", data });

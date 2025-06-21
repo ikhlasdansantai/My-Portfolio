@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import React from "react";
-import BlogCard from "../components/common/Fragments/BlogCard";
+import BlogCard from "../_components/common/Fragments/BlogCard";
 
 export const metadata: Metadata = {
   title: "Blogs",
